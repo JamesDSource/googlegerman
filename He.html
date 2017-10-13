@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style>
+
+
+
+
+
+</style>
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+<h1 style="color:green;"> Heidelberg </h1>
+<h2 style="color:black;"> what to do </h2>
+
+
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+<script>
+function myMap(){
+var mapCenter = new google.maps.LatLng(49.3988, 8.6724);
+var mapProp= {
+    center:mapCenter,
+    zoom:10,
+    backroundColor: '#f4cb42',
+
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var HeidelCas = new google.maps.LatLng(49.4106,8.7153)
+var HeiCas = new google.maps.Marker({position: HeidelCas});
+HeiCas.setMap(map);
+var Bismarckplatz = new google.maps.LatLng(49.4109,8.7157)
+var Bismarck = new google.maps.Marker({position: Bismarckplatz});
+Bismarck.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyAIMF0poF6XqlboPuO1aBWiZZ2KiZ2G0aw&callback=myMap"></script>
+
+<p> The Heidelberg Castle in Heidelberg Germany is a large 16th century Castle. It is made</p> 
+<p>from red sandstone and is positioned on a hillside. The Castle has a guided tour</p>
+<p>of the place, and a big wine barrel </p>
+<img src="heidel.jpg"> 
+<p> The Pharmacy Museum is very close to the Heidelberg Castle. The Museum has many exhibits</p>
+<p> from over 2000 years of medical advancements and progress. The Pharmacy Museum tries to </p>
+<p> make a great interactive experience. Small souvenir shop is present, but entrance is free. </p>      
+<img src="21497d6154523d4a1de57c84ac49e443.png" style="width:340px;">
+
+
+<a href="googlegerman.html"> <button> Back to homepage </button> </a>
+
+</body>

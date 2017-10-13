@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+h1 {color:green;}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+<h1><center>Germany</center></h1> 
+<div class="dropdown">
+  <button class="dropbtn">Links</button>
+  <div class="dropdown-content">
+    <a href="Berlin.html">Berlin</a>
+    <a href="Hamburg.html">Hamburg</a>
+    <a href="He.html">Heidelberg</a>
+    <a href="Bib.html">Bibliography</a>
+  </div>
+</div>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+<script>
+function myMap(){
+var mapCenter = new google.maps.LatLng(51.1657, 10.4515);
+var mapProp= {
+    center:mapCenter,
+    zoom:7,
+    backroundColor: '#f4cb42',
+
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var Berlin = new google.maps.LatLng(52.5200, 13.4050)
+var berlinMark = new google.maps.Marker({position: Berlin});
+berlinMark.setMap(map);
+var hamburg = new google.maps.LatLng(53.5511, 9.9937)
+var ham = new google.maps.Marker({position: hamburg});
+ham.setMap(map);
+var Heidelberg = new google.maps.LatLng(49.3988, 8.6724)
+var Heide = new google.maps.Marker({position: Heidelberg});
+Heide.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyAIMF0poF6XqlboPuO1aBWiZZ2KiZ2G0aw&callback=myMap"></script>
+
+<img src="Flagger.jpg" style="width:700px;">
+</body>
+

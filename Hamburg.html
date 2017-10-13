@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style>
+
+
+
+
+
+</style>
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+<h1 style="color:green;"> Hamburg </h1>
+
+
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+<script>
+function myMap(){
+var mapCenter = new google.maps.LatLng(53.5511, 9.9937);
+var mapProp= {
+    center:mapCenter,
+    zoom:10,
+    backroundColor: '#f4cb42',
+
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var sub = new google.maps.LatLng(53.5450,9.9552)
+var B515 = new google.maps.Marker({position: sub});
+B515.setMap(map);
+var OwO = new google.maps.LatLng(53.5450,9.9968)
+var OvO = new google.maps.Marker({position: OwO});
+OvO.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyAIMF0poF6XqlboPuO1aBWiZZ2KiZ2G0aw&callback=myMap"></script>
+<p> The Speicherstadt in Hamburg Germany, is the largest warehouse district in the world.</p>
+<p> There are long canals, and the building are built on large oak foundation </p>
+<img src="lol.jpg" style="width:500px;">
+<p> The B515 is a Russian Submarine from the cold war. It is one of the largest </p>
+<p> Hunting and espionage Submarines in the world. Looking inside the submarine tell</p>
+<p> the goods and bads of life underwater </p>
+<img src="sub.jpg" style="width:500px;">    
+
+<a href="googlegerman.html"> <button> Back to homepage </button> </a>
+
+</body>
